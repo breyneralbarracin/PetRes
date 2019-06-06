@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mascotas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="Atras"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let mascota of mascotas">
+      <ion-card-header>
+        <ion-card-subtitle>{{ mascota.mac }}</ion-card-subtitle>
+        <ion-card-title>{{ mascota.name }}</ion-card-title>
+        <ion-button (click)="reportar({{ mascota.id }})" color="danger"> REPORTAR </ion-button>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{ mascota.details }}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header> </ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-img src="assets/icon/favicon.png"></ion-img>
+      </ion-thumbnail>
+    </ion-item>
+    <form (ngSubmit)="loginUser()">
+      <ion-item>
+        <ion-label position="fixed">Identificación</ion-label>
+        <ion-input
+          placeholder="Ingrese su identificación"
+          type="number"
+          name="id"
+          [(ngModel)]="user.id"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Contraseña</ion-label>
+        <ion-input
+          placeholder="Ingrese su contraseña"
+          type="password"
+          name="password"
+          [(ngModel)]="user.password"
+        ></ion-input>
+      </ion-item>
+      <ion-button expand="block" color="success" type="submit"
+        >ENVIAR</ion-button
+      >
+    </form>
+  </ion-list>
+</ion-content>
