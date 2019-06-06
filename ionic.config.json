@@ -1,5 +1,7 @@
 {
   "name": "RYSM_Final",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
